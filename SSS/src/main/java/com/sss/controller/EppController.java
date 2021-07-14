@@ -1,4 +1,4 @@
-package com.sss.rest;
+package com.sss.controller;
 
 import java.util.List;
 import java.util.Optional;
@@ -15,7 +15,7 @@ import com.sss.entitys.Epp;
 @RestController
 @RequestMapping("/epp-mostrar")
 
-public class EppREST {
+public class EppController {
 
 	@Autowired
 	private EppDAO eppDAO;

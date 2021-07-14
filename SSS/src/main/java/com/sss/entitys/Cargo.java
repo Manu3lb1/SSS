@@ -1,5 +1,7 @@
 package com.sss.entitys;
 
+import java.util.Date;
+
 import javax.persistence.*;
 
 
@@ -27,6 +29,12 @@ public class Cargo {
 		
 		@Column(name ="NOMBRE_CARGO", nullable=false, length=50)
 		private String nombreCargo;
+		
+		@Column(name ="FECHA_CARGO", nullable=false, length=50)
+		private Date fechaCargo;
+		
+		@Column(name ="CARGO_ACTIVIDAD_ID", nullable=false, length=50)
+		private Long cargoActividadId;
 		
 }
 

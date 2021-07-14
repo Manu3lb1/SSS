@@ -1,4 +1,4 @@
-package com.sss.rest;
+package com.sss.controller;
 
 
 import java.util.List;
@@ -15,7 +15,7 @@ import com.sss.entitys.Proceso;
 @RestController
 @RequestMapping("/proceso")
 
-public class ProcesoREST {
+public class ProcesoController {
 	
 	@Autowired
 	private ProcesoDAO procesoDAO;

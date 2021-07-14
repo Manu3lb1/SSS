@@ -34,6 +34,9 @@ public class Sede {
 		@Column(name ="DIRECCION", nullable=false, length=30)
 		private String direccion;
 		
+		@Column(name ="SEDE_CLIENTE_ID", nullable=false, length=50)
+		private Long sedeClienteId;
+		
 		/*
 		@Column(name ="ADMIN_CLIENTE_ID")
 		private long admin_cliente_id;*/

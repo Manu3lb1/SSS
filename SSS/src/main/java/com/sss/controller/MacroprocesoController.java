@@ -1,4 +1,4 @@
-package com.sss.rest;
+package com.sss.controller;
 
 import java.util.List;
 import java.util.Optional;
@@ -13,7 +13,7 @@ import com.sss.entitys.Macroproceso;
 @RestController
 @RequestMapping("/macroproceso")
 
-public class MacroprocesoREST {
+public class MacroprocesoController {
 
 	
 	@Autowired

@@ -57,4 +57,7 @@ public class Cliente {
 	@Column(name ="CONTRASENA", nullable=false, length=50)
 	private String contrasena;
 	
+	@Column(name ="CLIENTE_ADMIN_ID", nullable=false, length=50)
+	private Long clienteAdminId;
+	
 }

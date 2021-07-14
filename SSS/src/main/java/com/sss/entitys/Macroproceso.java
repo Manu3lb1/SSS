@@ -29,5 +29,8 @@ public class Macroproceso {
 	
 	@Column(name ="MACROPROCESO", nullable = false, length = 50)
 	private String macroproceso;
+	
+	@Column(name ="MACROPROCESO_EMPLEADO_ID", nullable=false, length=50)
+	private Long macroprocesoEmpleadoId;
 
 }

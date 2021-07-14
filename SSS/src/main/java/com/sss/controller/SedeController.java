@@ -1,4 +1,4 @@
-package com.sss.rest;
+package com.sss.controller;
 
 import java.util.List;
 import java.util.Optional;
@@ -13,7 +13,7 @@ import com.sss.entitys.Sede;
 
 @RestController
 @RequestMapping("/sede")
-public class SedeREST {
+public class SedeController {
 	
 	@Autowired
 	private SedeDAO sedeDAO;

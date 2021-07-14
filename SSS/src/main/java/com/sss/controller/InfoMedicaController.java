@@ -1,4 +1,4 @@
-package com.sss.rest;
+package com.sss.controller;
 
 import java.util.List;
 import java.util.Optional;
@@ -14,7 +14,7 @@ import com.sss.entitys.InfoMedica;
 @RestController
 @RequestMapping("/infoMedica")
 
-public class InfoMedicaREST {
+public class InfoMedicaController {
 	
 	
 	@Autowired

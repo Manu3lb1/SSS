@@ -31,6 +31,10 @@ public class Actividad {
 		@Column(name ="CRITICIDAD", nullable=false, length=50)
 		private String criticidad;
 		
+		@Column(name ="ACTIVIDAD_PROCESO_ID", nullable=false, length=50)
+		private Long actividadProcesoId;
+		
+		
 }
 
 

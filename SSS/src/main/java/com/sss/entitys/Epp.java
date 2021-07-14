@@ -47,6 +47,9 @@ public class Epp {
 		@Column(name ="PARTE_PROTEGE", nullable=false, length=30)
 		private String parteProtege;
 		
+		@Column(name ="EPP_CARGO_ID", nullable=false, length=50)
+		private Long eppCargoId;
+		
 }
 
 

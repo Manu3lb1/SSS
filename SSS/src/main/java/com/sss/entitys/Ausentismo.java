@@ -52,7 +52,7 @@ public class Ausentismo {
 		private String tipoIncapacidad;
 		
 		@Column(name ="AUSENTISMO_EMPLEADO_ID", nullable = false)
-		private Long empleadoId;
+		private Long ausentismoEmpleadoId;
 
 }
 

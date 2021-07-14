@@ -39,5 +39,8 @@ public class InfoMedica {
 		
 		@Column(name ="EST_EMBARAZO", nullable=false, length=30)
 		private String estEmbarazo;
+		
+		@Column(name ="INFMEDICA_EMPLEADO_ID", nullable=false)
+		private Long infMedicaEmpleadoId;
 
 }

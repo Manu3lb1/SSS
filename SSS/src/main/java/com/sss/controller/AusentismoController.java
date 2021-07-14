@@ -1,4 +1,4 @@
-package com.sss.rest;
+package com.sss.controller;
 
 import java.util.List;
 import java.util.Optional;
@@ -14,7 +14,7 @@ import com.sss.entitys.Ausentismo;
 @RestController
 @RequestMapping("/ausentismo")
 
-public class AusentismoREST {
+public class AusentismoController {
 	
 	@Autowired
 	private AusentismoDAO ausentismoDAO;

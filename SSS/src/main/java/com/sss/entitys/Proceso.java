@@ -29,6 +29,9 @@ public class Proceso {
 		@Column(name ="PROCESO", nullable=false, length=30)
 		private String proceso;
 		
+		@Column(name ="PROCESO_MACROPROCESO_ID", nullable=false, length=50)
+		private Long procesoMacroprocesoId;
+		
 		/*
 		@Column(name ="ADMIN_CLIENTE_ID")
 		private long admin_cliente_id;*/

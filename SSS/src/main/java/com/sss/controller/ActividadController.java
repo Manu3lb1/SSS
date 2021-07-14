@@ -1,4 +1,4 @@
-package com.sss.rest;
+package com.sss.controller;
 
 import java.util.List;
 import java.util.Optional;
@@ -13,7 +13,7 @@ import com.sss.entitys.Actividad;
 
 @RestController
 @RequestMapping("/actividad")
-public class ActividadREST {
+public class ActividadController {
 	
 	@Autowired
 	private ActividadDAO actividadDAO;

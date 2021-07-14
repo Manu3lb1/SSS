@@ -1,4 +1,4 @@
-package com.sss.rest;
+package com.sss.controller;
 
 import java.util.List;
 import java.util.Optional;
@@ -13,7 +13,7 @@ import com.sss.entitys.Administrador;
 @CrossOrigin(origins = "http://localhost:4200", maxAge =3600)
 @RestController
 @RequestMapping("/administrador")
-public class AdministradorREST {
+public class AdministradorController {
 
 	@Autowired
 	private AdministradorDAO administradorDAO;
@@ -55,20 +55,20 @@ public class AdministradorREST {
 	
 	//Actualizar por PUT un Adminitrador de la base de datos
 	
-//	@PutMapping
-//	public ResponseEntity<Administrador> updateAdministrador(@RequestBody Administrador administrador){
-//		Optional<Administrador> optionalAdministrador = administradorDAO.findById(administrador.getIdAdmin());
-//		if (optionalAdministrador.isPresent()) {
-//			Administrador updateAdministrador = optionalAdministrador.get();
-//			updateAdministrador.setNombres(administrador.getNombres());
-//			updateAdministrador.setApellidos(administrador.getApellidos());
-//			updateAdministrador.setCorreo(administrador.getCorreo());
-//			updateAdministrador.setContrasena(administrador.getContrasena());
-//			administradorDAO.save(updateAdministrador);
-//			return ResponseEntity.ok(updateAdministrador);
-//		} else {
-//			return ResponseEntity.notFound().build();
-//		}
-//	}
+	@PutMapping
+	public ResponseEntity<Administrador> updateAdministrador(@RequestBody Administrador administrador){
+		Optional<Administrador> optionalAdministrador = administradorDAO.findById(administrador.getIdAdmin());
+		if (optionalAdministrador.isPresent()) {
+			Administrador updateAdministrador = optionalAdministrador.get();
+			updateAdministrador.setNombres(administrador.getNombres());
+			updateAdministrador.setApellidos(administrador.getApellidos());
+			updateAdministrador.setCorreo(administrador.getCorreo());
+			updateAdministrador.setContrasena(administrador.getContrasena());
+			administradorDAO.save(updateAdministrador);
+			return ResponseEntity.ok(updateAdministrador);
+		} else {
+			return ResponseEntity.notFound().build();
+		}
+	}
 
 }

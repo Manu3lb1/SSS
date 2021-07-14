@@ -1,4 +1,4 @@
-package com.sss.rest;
+package com.sss.controller;
 
 import java.util.List;
 import java.util.Optional;
@@ -9,12 +9,11 @@ import org.springframework.web.bind.annotation.*;
 
 import com.sss.dao.CargoDAO;
 import com.sss.entitys.Cargo;
-import com.sss.entitys.Empleado;
 
 
 @RestController
 @RequestMapping("/cargo")
-public class CargoREST {
+public class CargoController {
 	
 	@Autowired
 	private CargoDAO cargoDAO;

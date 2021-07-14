@@ -1,4 +1,4 @@
-package com.sss.rest;
+package com.sss.controller;
 
 import java.util.List;
 import java.util.Optional;
@@ -14,7 +14,7 @@ import com.sss.entitys.Cliente;
 @RestController
 @RequestMapping("/cliente")
 @CrossOrigin(origins ="http://localhost:4200" )
-public class ClienteREST {
+public class ClienteController {
 
 	@Autowired
 	private ClienteDAO clienteDAO;

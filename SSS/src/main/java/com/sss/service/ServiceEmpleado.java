@@ -1,7 +1,7 @@
 package com.sss.service;
 
 import java.util.List;
-import java.util.Optional;
+
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -12,9 +12,9 @@ import org.springframework.web.bind.annotation.RestController;
 import com.sss.entitys.Empleado;
 
 
-//@CrossOrigin   (origins = "http://localhost:4200", maxAge =3600)
-//@RestController
-//@RequestMapping("/empleado")
+@CrossOrigin   (origins = "http://localhost:4200", maxAge =3600)
+@RestController
+@RequestMapping("/empleado")
 public interface ServiceEmpleado {
 	//Lista tabla empleado de la base de datos SSS
 		@GetMapping
