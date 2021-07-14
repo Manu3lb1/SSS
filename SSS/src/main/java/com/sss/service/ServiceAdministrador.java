@@ -9,7 +9,7 @@ import com.sss.entitys.Administrador;
 public interface ServiceAdministrador {
 	
 	public ResponseEntity<Administrador> listAllAdministradors();
-	public abstract Optional<Administrador> findByOptional(Long idAdmin);
-	public abstract Administrador updateAdministrador (Administrador administrador);
-    public abstract int removeAdministrador(Long id_admin);
+	public Optional<Administrador> findByOptional(Long idAdmin);
+	public Administrador updateAdministrador (Administrador administrador);
+    public int removeAdministrador(Long id_admin);
 }

@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.*;
 import com.sss.dao.ActividadDAO;
 import com.sss.entitys.Actividad;
 
-
 @RestController
 @RequestMapping("/actividad")
 public class ActividadController {

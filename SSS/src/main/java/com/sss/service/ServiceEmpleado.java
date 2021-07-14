@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.sss.dto.EmpleadoAusentismoDTO;
+import com.sss.entitys.Administrador;
 import com.sss.entitys.Empleado;
 
 
@@ -22,5 +24,6 @@ public interface ServiceEmpleado {
 //	public abstract Optional<Empleado> findByOptional(Long idEmpleado);
 //	public abstract Empleado updateAdministrador (Empleado empleado);
 //    public abstract int removeAdministrador(Long idEmpleado);
+	
 
 }
