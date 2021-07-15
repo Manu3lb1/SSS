@@ -19,6 +19,8 @@ public class EmpleadoAusentismoDTO {
 	private Long idEmpleado;
 	private String nombres;
 	private String apellidos;
+	private String tipoDocumento;
+	private String numDocumento;
 	private Date fechaRegistro;
 	private String causa;
 	private Date fechaInicio;

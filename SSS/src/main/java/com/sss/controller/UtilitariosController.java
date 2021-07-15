@@ -22,13 +22,13 @@ public class UtilitariosController {
 	@Autowired
 	private EmpleadoDAO empleadoDAO;
 	
-//	@CrossOrigin
-//	@GetMapping("ausentismo")
-//	public ResponseEntity<List<EmpleadoAusentismoDTO>> getAusentismoEmpleado(){
-//		//List<Empleado> Empleado = empleadoDAO.findAll();
-//		List<EmpleadoAusentismoDTO> Empleado = empleadoDAO.findByAusentismoEmpleado(10027L);
-//		return ResponseEntity.ok(Empleado);
-//	}
+	@CrossOrigin
+	@GetMapping("ausentismo")
+	public ResponseEntity<List<EmpleadoAusentismoDTO>> getAusentismoEmpleado(){
+		//List<Empleado> Empleado = empleadoDAO.findAll();
+		List<EmpleadoAusentismoDTO> Empleado = empleadoDAO.findByAusentismoEmpleado(10027L);
+		return ResponseEntity.ok(Empleado);
+	}
 	
 	@CrossOrigin
 	@GetMapping("medica")

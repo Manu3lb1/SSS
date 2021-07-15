@@ -2,6 +2,8 @@ package com.sss.dto;
 
 import java.util.Date;
 
+import javax.persistence.Column;
+
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -18,6 +20,8 @@ public class EmpleadoMatrizDTO {
 	private Long idEmpleado;
 	private String nombres;
 	private String apellidos;
+	private String tipoDocumento;
+	private String numDocumento;
 	private String centroTrabajo;
 	private String macroproceso;
 	private String proceso;
@@ -26,3 +30,5 @@ public class EmpleadoMatrizDTO {
 	private String nombreCargo;
 	private Date fechaCargo;
 }
+
+	

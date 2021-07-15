@@ -14,14 +14,14 @@ import com.sss.service.ServiceEmpleado;
 @Service
 public class ServiceEmpleadoImpl implements ServiceEmpleado{
 
-	@Autowired
-	private EmpleadoDAO empleadoDAO;
-
-	@Override
-	public ResponseEntity<List<Empleado>> listAllEmpleado() {
-		// TODO Auto-generated method stub
-		return null;
-	}
+//	@Autowired
+//	private EmpleadoDAO empleadoDAO;
+//
+//	@Override
+//	public ResponseEntity<List<Empleado>> listAllEmpleado() {
+//		// TODO Auto-generated method stub
+//		return null;
+//	}
 	
 //	@Override
 //	public ResponseEntity<List<EmpleadoAusentismoDTO>> getAusentismoEmpleado() {
