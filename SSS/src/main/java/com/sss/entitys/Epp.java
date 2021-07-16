@@ -20,7 +20,7 @@ import lombok.Setter;
 
 public class Epp {
 		
-		
+
 		@Id
 		@Column(name ="ID_EPP")
 		@GeneratedValue(strategy = GenerationType.IDENTITY)

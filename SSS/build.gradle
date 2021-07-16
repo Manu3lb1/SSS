@@ -26,6 +26,7 @@ dependencies {
 	implementation group: 'io.springfox', name: 'springfox-swagger-ui', version: '2.9.2'
 	runtimeOnly 'com.oracle.database.jdbc:ojdbc8'
 	annotationProcessor 'org.projectlombok:lombok'
+    implementation group: 'org.apache.commons', name: 'commons-csv', version: '1.8'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 

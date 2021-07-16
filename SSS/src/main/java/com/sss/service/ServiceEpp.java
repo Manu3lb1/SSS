@@ -7,7 +7,7 @@ import com.sss.entitys.Epp;
 
 public interface ServiceEpp {
 	
-	public abstract List<Epp>findByAll();
-	public abstract Optional<Epp> findByOptional(Long idEpp);
+	public  List<Epp>findByAll();
+	public  Optional<Epp> findByOptional(Long idEpp);	
 
 }
