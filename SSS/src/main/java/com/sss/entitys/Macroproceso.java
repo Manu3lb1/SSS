@@ -23,10 +23,7 @@ public class Macroproceso {
 	@Column(name="ID_MACROPROCESO")
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long idMacroproceso;
-	
-	@Column(name ="CENTRO_TRABAJO", nullable = false, length=50)
-	private String centroTrabajo;
-	
+		
 	@Column(name ="MACROPROCESO", nullable = false, length = 50)
 	private String macroproceso;
 	

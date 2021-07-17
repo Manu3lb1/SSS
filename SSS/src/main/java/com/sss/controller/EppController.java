@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
@@ -29,6 +30,7 @@ public class EppController {
 
 	@Autowired
 	private EppDAO eppDAO;
+	
 	@Autowired
 	private CargarServicio cargarServicio;
 	
@@ -51,7 +53,10 @@ public class EppController {
 
 	}
 	
-	@PostMapping("cargar")
+	
+
+	
+	@PostMapping(path = {"/cargar"})
 	 public ResponseEntity<EppMensaje> uploadFile(@RequestParam("file") MultipartFile file) {
 	    String mensaje = "";
 
@@ -70,22 +75,6 @@ public class EppController {
 	    mensaje = "¡Sube un archivo csv!";
 	    return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(new EppMensaje(mensaje));
 	  }
-	
-	@GetMapping("/epps")
-	  public ResponseEntity<List<Epp>> getAllEpps() {
-	    try {
-	      List<Epp> epps = cargarServicio.getAllEpps();
-
-	      if (epps.isEmpty()) {
-	        return new ResponseEntity<>(HttpStatus.NO_CONTENT);
-	      }
-
-	      return new ResponseEntity<>(epps, HttpStatus.OK);
-	    } catch (Exception e) {
-	      return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
-	    }
-	  }
-
 
     @GetMapping("descargar")
     public String descargar (@RequestParam("archivos") MultipartFile file) {

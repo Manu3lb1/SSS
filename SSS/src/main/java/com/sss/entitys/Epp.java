@@ -2,6 +2,7 @@ package com.sss.entitys;
 
 import javax.persistence.*;
 
+import com.opencsv.bean.CsvBindByPosition;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -47,7 +48,8 @@ public class Epp {
 		@Column(name ="PARTE_PROTEGE", nullable=false, length=30)
 		private String parteProtege;
 		
-		@Column(name ="EPP_CARGO_ID", nullable=false, length=50)
+//		@Column(name ="EPP_CARGO_ID", nullable=false, length=50)
+		@Column(name ="EPP_CARGO_ID", length=50)
 		private Long eppCargoId;
 		
 }

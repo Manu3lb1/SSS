@@ -9,7 +9,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.sss.dao.CtrabajoDAO;
 import com.sss.dao.EmpleadoDAO;
+import com.sss.dto.CtrabajoEppDTO;
 import com.sss.dto.EmpleadoAusentismoDTO;
 import com.sss.dto.EmpleadoInfMedicaDTO;
 import com.sss.dto.EmpleadoMatrizDTO;
@@ -21,6 +23,9 @@ public class UtilitariosController {
 
 	@Autowired
 	private EmpleadoDAO empleadoDAO;
+	
+	@Autowired
+	private CtrabajoDAO ctrabajoDAO;
 	
 	@CrossOrigin
 	@GetMapping("ausentismo")
@@ -41,8 +46,16 @@ public class UtilitariosController {
 	@CrossOrigin
 	@GetMapping("matriz")
 	public ResponseEntity<List<EmpleadoMatrizDTO>> getMatrizEmpleado(){
-		//List<Empleado> Empleado = empleadoDAO.findAll();
 		List<EmpleadoMatrizDTO> Empleado = empleadoDAO.findByMatriz(10027L);
 		return ResponseEntity.ok(Empleado);
 	}
+	
+//	@CrossOrigin
+//	@GetMapping("epp")
+//	public ResponseEntity<List<CtrabajoEppDTO>> getCtrabajoEpp(){
+//		List<CtrabajoEppDTO> Ctrabajo = ctrabajoDAO.findByCtrabajoEpp(326L);
+//		return ResponseEntity.ok(Ctrabajo);
+//	}
+	
+	
 }

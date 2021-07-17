@@ -11,22 +11,26 @@ import com.sss.csv.CSV;
 import com.sss.dao.EppDAO;
 import com.sss.entitys.Epp;
 
-
 @Service
 public class CargarServicio {
-	 @Autowired
-	  EppDAO eppDao;
+	
+	@Autowired
+	EppDAO eppDao;
 
-	  public void save(MultipartFile file) {
-	    try {
-	      List<Epp> epps = CSV.csvEpp(file.getInputStream());
-	      eppDao.saveAll(epps);
-	    } catch (IOException e) {
-	      throw new RuntimeException("fail to store csv data: " + e.getMessage());
-	    }
-	  }
+	public void save(MultipartFile file) {
+		try {
+			List<Epp> epps = new CSV().csvEpp(file.getInputStream());
+			eppDao.saveAll(epps);
+		} catch (Exception e) {
+			System.out.println();
+			e.printStackTrace();
+			throw new RuntimeException("fail to store csv data: " + e.getMessage());
+		}
+	}
+	
+	
+	public MultipartFile getFile() {
+		return new CSV().csvGetFile(eppDao);
+	}
 
-	  public List<Epp> getAllEpps() {
-	    return eppDao.findAll();
-	  }
 }

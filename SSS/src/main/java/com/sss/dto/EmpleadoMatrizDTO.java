@@ -22,7 +22,6 @@ public class EmpleadoMatrizDTO {
 	private String apellidos;
 	private String tipoDocumento;
 	private String numDocumento;
-	private String centroTrabajo;
 	private String macroproceso;
 	private String proceso;
 	private String nombreActividad;
