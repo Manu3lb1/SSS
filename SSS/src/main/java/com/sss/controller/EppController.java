@@ -54,9 +54,7 @@ public class EppController {
 	}
 	
 	
-
-	@CrossOrigin
-	@PostMapping(path = {"/cargar"})
+	@PostMapping("cargar")
 	 public ResponseEntity<EppMensaje> uploadFile(@RequestParam("file") MultipartFile file) {
 	    String mensaje = "";
 

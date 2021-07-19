@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
@@ -15,7 +16,7 @@ import com.sss.entitys.Empleado;
 //Con esta interfaz se implementa todas las funciones del CRUD de forma automatica.
 
 @Repository
-public interface EmpleadoDAO extends JpaRepository<Empleado, Long> {
+public interface EmpleadoDAO extends CrudRepository<Empleado, Long> {
 
 	@Query(value= ScriptsJPQL.FIND_BY_EMPLEADO_AUSENTISMO)
     public List<EmpleadoAusentismoDTO> findByAusentismoEmpleado (@Param("idEmpleado") Long idEmpleado);

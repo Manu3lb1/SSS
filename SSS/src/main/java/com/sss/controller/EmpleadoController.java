@@ -6,7 +6,6 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -28,39 +27,38 @@ public class EmpleadoController {
 	
 	@GetMapping
 	public ResponseEntity<List<Empleado>> getEmpleado(){
-		List<Empleado> Empleado = empleadoDAO.findAll();
-		return ResponseEntity.ok(Empleado);
+		List<Empleado> empleado = (List<Empleado>) empleadoDAO.findAll();
+		return ResponseEntity.ok(empleado);
 	}
 	
 	//Consulta por POST un Empleado de la base de datos por el ID
 	@RequestMapping(value = "{idEmpleado}") // Empleado/idEmpleado
-	public ResponseEntity<Empleado> getEmpleadoById(@PathVariable("idEmpleado") Long idEmpleado) {
-		Optional<Empleado> optionalEmpleado = empleadoDAO.findById(idEmpleado);
-		if (optionalEmpleado.isPresent()) {
-			return ResponseEntity.ok(optionalEmpleado.get());
+	public ResponseEntity<Empleado> getAdministradorById(@PathVariable("idEmpleado") Long idEmpleado) {
+		Optional<Empleado> optionalAdministrador = empleadoDAO.findById(idEmpleado);
+		if (optionalAdministrador.isPresent()) {
+			return ResponseEntity.ok(optionalAdministrador.get());
 		} else {
 			return ResponseEntity.noContent().build();
 		}
+//	public ResponseEntity<Empleado> getEmpleadoById(@PathVariable("idEmpleado") Long idEmpleado) {
+//		Optional<Empleado> optionalEmpleado = empleadoDAO.findById(idEmpleado);
+//		if (optionalEmpleado.isPresent()) {
+//			return ResponseEntity.ok(optionalEmpleado.get());
+//		} else {
+//			return ResponseEntity.noContent().build();
+//		}
 
 	}
 	
 	
-	
 	//Crear por POST un Empleado en la base de datos
 	@PostMapping 
-	public ResponseEntity<Empleado> createEmpleado(@RequestBody Empleado empleado){
+	public ResponseEntity<Empleado> createEmpleado(Empleado empleado){
 		Empleado newEmpleado =empleadoDAO.save(empleado);
 		return ResponseEntity.ok(newEmpleado);
 	}
 	
-	
-	
-	//Eliminar por DELETE un Empleado de la base de datos
-	@DeleteMapping(value = "{idEmpleado}")
-		public ResponseEntity<Void> deleteEmpleado(@PathVariable("idEmpleado") Long idEmpleado){
-			empleadoDAO.deleteById(idEmpleado);
-			return ResponseEntity.ok(null);
-		}
+
 
 	//Actualizar por PUT un Empleado de la base de datos
 	@PutMapping

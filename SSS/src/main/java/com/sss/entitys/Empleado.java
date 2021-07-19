@@ -68,7 +68,8 @@ public class Empleado {
 		@Column(name ="CONTRASENA", nullable=false, length=30)
 		private String contrasena;
 		
-		@Column(name ="EMPLEADO_CTRABAJO_ID", nullable=false, length=50)
-		private Long empleadoCtrabajoId;
+		@ManyToOne
+		@JoinColumn(name ="EMPLEADO_CTRABAJO_ID")
+		CTrabajo ctrabajo;
 		
 }
